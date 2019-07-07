@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="/socket.io/socket.io.js"></script>
+    
+    <link href="./css/style.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    
+    <title>Hello, world!</title>
+  </head>
+  <body>
+    <!-- The Modal -->
+  <div class="modal fade" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title" id="modalTitle">Please enter a unique username to join chatroom:</h4>          
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <form>
+                <div class="form-group">
+                    <input id="handle" type="text" class="form-control" placeholder="Name" required>
+                </div>
+                  <button type="submit" id="namebtn" class="btn btn-primary" data-dismiss="modal">submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="my" style=" font-size: 6vw;background: #575ed8; color: #fff; text-align: center;">
+      Node JS Chatbox 
+      <!--<p id="welcomeMessage" class="welcomeName" style="background: #575ed8; color: #fff; text-align: right; margin-right:10px; ;"> welcome</p>  
+    -->
+    </div>
+    <div id="welcomeMessage" class="welcomeName" style="background: #575ed8; color: #fff; text-align: right; padding-right:10px; ;"> welcome</div>
+    <div class="container fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <br><br>
+            <div id ="userOnline" style="border: 2px solid #00a3cc; border-radius: 5px; font-size: 30px;background: #FFF; padding: 60px auto;color:#00b386;; text-align: center;">
+                USERS ONLINE
+            </div>
+            <br>
+            <div id="userList">
+                
+            </div>   
+        </div>
+        <div class="col-md-6">
+          <div id= "mario-chat">
+            <div id ="chat-window">
+              <div id="output">
+                    
+              </div>
+              <div id="feedback">
+
+              </div>
+            </div> 
+            <input id="message" type= "text" placeholder="enter text"/>
+            <button id="send">Send</button>
+          </div>           
+        </div>
+        <div class="col-md-3"> 
+          <br><br>
+          <div style="border: 2px solid #00a3cc; border-radius: 5px; font-size: 30px;background: #FFF; padding: 60px auto;color:#00b386;; text-align: center;">
+            Private chats
+          </div>
+          <br>
+          <div id="accordion">
+            
+          </div>
+        </div>
+      </div>      
+    </div>
+    <div class="outer-footer">
+      
+      <div class="myfooter">
+        <p>Designed and Developed by Nitesh Kaushik.</p>
+      </div>
+    </div>
+    
+ 
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./js/chatLogic.js"></script>
+  </body>
+</html>
